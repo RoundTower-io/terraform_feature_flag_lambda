@@ -4,6 +4,9 @@ variable "trainingID" {
 }
 
 variable "deployment" {
-  default = "blue"
+  default = "feature"
 }
 
+variable "language" {
+  default = "english"
+}
