@@ -11,7 +11,7 @@ This borrows heavily from [this article](https://learn.hashicorp.com/terraform/a
 terraform init
 terraform apply -auto-approve
 ``` 
-## Then, we switch between languages in the output, use the following commands
+## Then, to switch between languages in the output, use the following commands
 ```bash
 terraform apply -var="language=french"
 OR
