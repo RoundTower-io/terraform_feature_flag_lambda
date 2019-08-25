@@ -7,6 +7,12 @@ resource "aws_s3_bucket" "b" {
   acl = "private"
 }
 
+data "archive_file" "init" {
+  type        = "zip"
+  source_file = "${path.module}/feature/main.js"
+  output_path = "${path.module}/feature.zip"
+}
+
 resource "aws_s3_bucket_object" "blue" {
   bucket = aws_s3_bucket.b.id
   key = "feature.zip"
