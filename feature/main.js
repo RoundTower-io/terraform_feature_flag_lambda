@@ -4,7 +4,7 @@ exports.handler = function (event, context, callback) {
 
     var language = process.env.language.toLowerCase()
 
-    if(language === 'french') {
+    if (language === 'french') {
         var lang_resp = '<p>Bonjour</p>'
     } else {
         var lang_resp = '<p>Hello</p>'
@@ -16,7 +16,7 @@ exports.handler = function (event, context, callback) {
             'Content-Type': 'text/html; charset=utf-8'
         },
 
-    body: lang_resp
-}
+        body: lang_resp
+    }
     callback(null, response)
 }
